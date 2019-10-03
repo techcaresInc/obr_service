@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5a528bb4-e869-4d53-8249-893ac238c3de">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="206" y="69" width="143" height="19" forecolor="#DA3937" uuid="bf66defa-7446-4a9b-b488-9955ea2860e0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[ REPUBLIC OF KENYA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="243" y="90" width="69" height="1" forecolor="#DA3937" uuid="7b1de831-703a-4d09-88a7-fb2d7ef9cee4"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="162" y="5" width="231" height="31" forecolor="#DA3937" uuid="f218d6da-4182-4c42-8d03-397781ae8757"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICATE OF BIRTH	]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="542" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" forecolor="#DA3937" uuid="d228736e-a1d5-404d-a229-4398762280e5"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="22" width="555" height="1" forecolor="#DA3937" uuid="fa62a8bc-a72d-47f2-8fbb-2abf98714c1f"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="13" y="5" width="80" height="20" forecolor="#DA3937" uuid="09d72083-8bf0-4a8c-a4a1-a0b6cd330200"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Birth in the]]></text>
+			</staticText>
+			<line>
+				<reportElement x="108" y="14" width="135" height="1" forecolor="#DA3937" uuid="097eecde-20b1-4ad0-a602-6a06931654f3"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="243" y="5" width="100" height="20" forecolor="#DA3937" uuid="ec7ed7a5-6815-46a8-bc7b-0c6b2bca2b7b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[District in the]]></text>
+			</staticText>
+			<line>
+				<reportElement x="349" y="14" width="135" height="1" forecolor="#DA3937" uuid="cb5b4284-d86a-4071-9497-7729d53531f6"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="493" y="5" width="62" height="20" forecolor="#DA3937" uuid="3f379450-a1d7-4d22-a418-ad77f798c182"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Province	]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

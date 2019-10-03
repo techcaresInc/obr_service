@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sampleid" language="groovy" pageWidth="243" pageHeight="153" columnWidth="243" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aa34f958-c404-4a0d-9f58-384e386ed4c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<title>
+		<band height="50">
+			<image>
+				<reportElement x="98" y="0" width="47" height="50" uuid="230ee8b6-3fba-451c-a64e-b289e4d5cf62"/>
+				<imageExpression><![CDATA["/root/IdeaProjects/techcaresinc_obr/src/main/resources/static/s_ke.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="17" y="20" width="81" height="10" uuid="b41989ab-df3a-4d41-bbea-a55d39a893f9"/>
+				<textElement>
+					<font size="7" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[REPUBLIC OF KENYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="20" width="49" height="10" uuid="be815d8d-ca1d-40fc-9f5a-db6d191024c4"/>
+				<textElement>
+					<font size="7" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[BIRTH CARD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="40" width="28" height="10" uuid="3c5fd37a-24ab-4f9c-8910-55b11a95d66d"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Entry NO.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="173" y="48" width="70" height="1" uuid="3dbab274-21ff-46c0-a59b-43436af600ec"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="20">
+			<staticText>
+				<reportElement x="5" y="0" width="60" height="10" uuid="c5a51d2c-5798-4c74-a9dd-0dae9aeefc94"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="0" width="178" height="20" uuid="14888432-e83e-4ebe-823b-7dcf11c5bdfb"/>
+				<textElement>
+					<font fontName="Serif" size="10" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Jafari Mchasa Akida"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement x="5" y="0" width="60" height="10" uuid="46569b69-a7d7-48f7-a440-d10fe2f60c6d"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement x="5" y="0" width="60" height="10" uuid="7bf1f937-8595-4210-b483-1589decda163"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Place of Birth]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement x="5" y="0" width="60" height="10" uuid="0fe5422c-11c8-4a96-8420-6875d8e78f58"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Father's Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="0" width="178" height="20" uuid="c9c7f3cd-d7f1-4029-9dd8-0509cc9a9e52"/>
+				<textElement>
+					<font fontName="Serif" size="10" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Jafari Mchasa Akida"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement x="5" y="0" width="60" height="10" uuid="7aa5660e-07f6-42a6-9ff5-3dd41c82fcc4"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mother's Name]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement x="5" y="0" width="82" height="10" uuid="0b2b5a12-8da5-4546-83f7-7908c8277c37"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[County]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement x="5" y="0" width="82" height="10" uuid="50c699d3-2eaf-46e5-b3fd-650a89511ae2"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Constituency]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement x="5" y="0" width="82" height="10" uuid="1e799ff3-34c9-4209-a697-a8a0f2dd6f3b"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Location]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement x="5" y="0" width="82" height="10" uuid="69beb674-b8ad-4861-8ce3-18b34c0e0cbc"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub-Location/Village]]></text>
+			</staticText>
+		</band>
+		<band height="50">
+			<staticText>
+				<reportElement x="15" y="10" width="210" height="40" uuid="257e25c5-fa42-4aec-92bb-223629ef47cd"/>
+				<textElement>
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Sapmle tet]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

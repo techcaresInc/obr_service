@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css}" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <title>TechIn</title>
+</head>
+<body>
+<footer th:fragment="footer">
+
+    <div class="center-block" style="justify-content: center; display: flex">
+        <ul class="list-inline">
+            <li><a href="https://twitter.com/TechcaresInc?s=09"><i class="fa fa-twitter fa-2x"></i></a></li>
+            <li><a href="https://github.com/techcaresInc"><i class="fa fa-github fa-2x"></i></a></li>
+            <li><a href="https://chat.whatsapp.com/ITIGb0RAZqYLQCYOHcO44V"><i class="fa fa-whatsapp fa-2x"></i></a></li>
+        </ul>
+    </div>
+
+    <div  style="background-color: #aa2906" class="row text-center">
+        <span>Copyrights &copy; Techcares Inc 2019</span>
+        <span>A Solution To Your Worries</span>
+    </div>
+
+</footer>
+<script type="text/javascript"
+        th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+<script type="text/javascript"
+        th:src="@{/webjars/bootstrap/3.2.0/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

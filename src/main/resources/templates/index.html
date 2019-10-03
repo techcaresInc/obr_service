@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css}" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="css/nbc.css"/>
+    <title>Techcares Inc</title>
+</head>
+<body>
+
+<!--/*@thymesVar id="certificate" type="org.techcaresinc.techcaresinc_obr_service.entities.Certificate"*/-->
+<form id="newborncertificate" class="center-block"
+      style="background-color: #b2906a;width: 800px; border: 2px solid black"
+      th:object="${certificate}" th:action="@{/register}" method="post" enctype="multipart/form-data">
+
+    <img src="img/s_ke.png" class="center-block">
+
+    <label class="text-uppercase text-center center-block">republic of kenya</label>
+    <label class="text-uppercase text-center center-block">the registration of births and deaths act</label>
+    <label class="text-capitalize text-center center-block"><i>&lbbrk;cap. 149&rbbrk;</i></label>
+    <label class="text-uppercase text-center center-block">application for registration of birth of a citizen of kenya</label>
+
+    <div class="row center-block nbcrowdiv">
+        <span class="glyphicon glyphicon-user"></span>
+        <input placeholder="child's first &amp; middle name" style="width: 250px"
+               type="text" th:field="*{child_name}">
+
+        <input type="text" placeholder="child's last name">
+
+        <label for="sex" class="text-capitalize">sex</label>
+        <select id="sex">
+            <option>M</option>
+            <option>F</option>
+        </select>
+
+        <span class="pull-right">
+            <span class="glyphicon glyphicon-calendar text-capitalize"></span>
+            <input type="date" style="height: 30px" th:field="*{age}">
+        </span>
+
+        <span class="text-capitalize glyphicon glyphicon-question-sign">
+             Was the Child Born in an Health Facility&lbbrk;Hospital&rbbrk; &quest;
+         </span>
+        <select id="select_hospital" class="pull-right">
+            <option></option>
+            <option value="hospital">Yes</option>
+            <option value="null_hospital">No</option>
+        </select>
+    </div>
+
+    <div id="hospital" class="row center-block select_hospital" style="display: none">
+        <span class="glyphicon glyphicon-map-marker"></span>
+        <input type="text" placeholder="city of birth">
+
+        <span class="glyphicon glyphicon-home"></span>
+        <input type="text" placeholder="healthy facility">
+
+        <span class="glyphicon glyphicon-bell"></span>
+        <input type="text" placeholder="notification number">
+
+        <div class="row center-block">
+            <span class="glyphicon glyphicon-file"></span>
+            <label class="text-capitalize">scanned copy of birth notification</label>
+            <input type="file" class="pull-right" style="display: inline-block; width: 450px">
+        </div>
+
+    </div>
+
+    <div id="null_hospital" class="row center-block select_hospital" style="display: none">
+        <span class="glyphicon glyphicon-map-marker"></span>
+        <input type="text" placeholder="location">
+
+        <input type="text" placeholder="sub location">
+
+        <input type="text" placeholder="place of birth">
+
+        <div class="row center-block">
+            <span class="glyphicon glyphicon-file"></span>
+            <label class="text-capitalize">scanned copy of chief's acknowledgement</label>
+            <input type="file" class="pull-right" style="display: inline-block; width: 450px">
+        </div>
+    </div>
+
+    <div class="row center-block nbcrowdiv">
+        <span class="glyphicon glyphicon-user"></span>
+        <input type="text" placeholder="father's first &amp; middle name" style="width: 300px"> &sol;
+
+        <input type="text" placeholder="father's last name">
+
+        <input type="text" placeholder="id number&sol;passport number" style="width: 180px" class="pull-right">
+    </div>
+    <div class="row center-block">
+        <span class="glyphicon glyphicon-file"></span>
+        <label for="idpp" class="text-capitalize">scanned copy of id/passport</label>
+        <input type="file"  id="idpp" class="pull-right" style="display: inline-block; width: 450px" name="file">
+    </div>
+
+    <!--    <embed id="file" style="width: 100%; display: none">-->
+
+    <div class="row center-block">
+        <span class="glyphicon glyphicon-user"></span>
+        <input type="text" placeholder="mother's first &amp; middle name" style="width: 300px"> &sol;
+
+        <input type="text" placeholder="mother's last name">
+
+        <input type="text" placeholder="id number&sol;passport number" style="width: 180px" class="pull-right">
+    </div>
+    <div class="row center-block">
+        <span class="glyphicon glyphicon-file"></span>
+        <label for="idppm" class="text-capitalize">scanned copy of id/passport</label>
+        <input type="file"  id="idppm" class="pull-right" style="display: inline-block; width: 450px;">
+    </div>
+
+
+    <div class="row center-block nbcrowdiv">
+        <span class="glyphicon glyphicon-certificate"></span>
+        <input class="pull-right" type="submit" value="Register">
+    </div>
+</form>
+
+<!-- Techcares Inc - A Solution To Your Worries Footer -->
+<footer th:insert="fragments/footer :: footer"></footer>
+
+<script type="text/javascript"
+        th:src="@{/webjars/jquery/1.11.1/jquery.min.js/}"></script>
+<script type="text/javascript"
+        th:src="@{/webjars/bootstrap/3.2.0/js/bootstrap.min.js}"></script>
+
+<script src="js/nbc.js"></script>
+
+</th:block>
+
+</body>
+</html>
