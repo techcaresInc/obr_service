@@ -2,139 +2,236 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
+    <meta charset="utf-8">
+    <title>TechBirth  - Official Birth Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="colorlib.com">
+
     <link rel="stylesheet" type="text/css"
           th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css}" />
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-    <link rel="stylesheet" type="text/css"
-          href="css/nbc.css"/>
-    <title>Techcares Inc</title>
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+    <!-- DATE-PICKER -->
+    <link rel="stylesheet" href="vendor/date-picker/css/datepicker.min.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!--/*@thymesVar id="certificate" type="org.techcaresinc.techcaresinc_obr_service.entities.Certificate"*/-->
-<form id="newborncertificate" class="center-block"
-      style="background-color: #b2906a;width: 800px; border: 2px solid black"
-      th:object="${certificate}" th:action="@{/register}" method="post" enctype="multipart/form-data">
+<header th:insert="fragments/header :: header"></header>
 
-    <img src="img/s_ke.png" class="center-block">
+<div class="wrapper">
+    <form action="" id="wizard">
+        <!-- SECTION 1 -->
+        <h4></h4>
+        <section>
+            <h3>CHILD'S INFO</h3>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">
+                        First Name
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-account-o"></i>
+                        <input type="text" class="form-control" placeholder="ex: Jafari Mchasa">
+                    </div>
+                </div>
+                <div class="form-col">
+                    <label for="">
+                        Last Name
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-edit"></i>
+                        <input type="text" class="form-control" placeholder="ex: Akida">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">
+                        Notification Number
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-notifications"></i>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-col">
+                    <label for="">
+                        Notification / Chief Ack.
+                    </label>
+                        <input type="file" class="form-control zmdi-file-add">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">
+                        Specialization
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-spellcheck"></i>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-col">
+                    <label for="">
+                        Date of Birth
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-calendar"></i>
+                        <input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <label class="text-uppercase text-center center-block">republic of kenya</label>
-    <label class="text-uppercase text-center center-block">the registration of births and deaths act</label>
-    <label class="text-capitalize text-center center-block"><i>&lbbrk;cap. 149&rbbrk;</i></label>
-    <label class="text-uppercase text-center center-block">application for registration of birth of a citizen of kenya</label>
+        <!-- SECTION 2 -->
+        <h4></h4>
+        <section>
+            <h3>Residential address</h3>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">
+                        Country
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-account-o"></i>
+                        <select name="" id="" class="form-control">
+                            <option value="united states" class="option">United States</option>
+                            <option value="united kingdom" class="option">United Kingdom</option>
+                            <option value="viet nam" class="option">Viet Nam</option>
+                        </select>
+                        <i class="zmdi zmdi-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="form-col">
+                    <label for="">
+                        Street Address
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-pin"></i>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">
+                        Apartment
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-home"></i>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-col">
+                    <label for="">
+                        Town / City
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-pin-drop"></i>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">
+                        County
+                    </label>
+                    <div class="form-holder">
+                        <i class="zmdi zmdi-pin"></i>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-col">
+                    <label for="">
+                        Postcode / Zip
+                    </label>
+                    <div class="form-holder password">
+                        <i class="zmdi zmdi-eye"></i>
+                        <input type="password" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="row center-block nbcrowdiv">
-        <span class="glyphicon glyphicon-user"></span>
-        <input placeholder="child's first &amp; middle name" style="width: 250px"
-               type="text" th:field="*{child_name}">
+        <!-- SECTION 3 -->
+        <h4></h4>
+        <section>
+            <h3 style="margin-bottom: 37px;">What are you doing?</h3>
+            <div class="grid">
+                <div class="grid-item active">
+                    <div class="thumb">
+                        <img src="images/programming.jpg" alt="">
+                    </div>
+                    <div class="heading">
+                        Programming
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="thumb">
+                        <img src="images/sports.jpg" alt="">
+                    </div>
+                    <div class="heading">
+                        Sports
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="thumb">
+                        <img src="images/business.jpg" alt="">
+                    </div>
+                    <div class="heading">
+                        Business
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="thumb">
+                        <img src="images/tour-guide.jpg" alt="">
+                    </div>
+                    <div class="heading">
+                        Tour Guide
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="thumb">
+                        <img src="images/art-design.jpg" alt="">
+                    </div>
+                    <div class="heading">
+                        Art-Design
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="thumb">
+                        <img src="images/doctor.jpg" alt="">
+                    </div>
+                    <div class="heading">
+                        Doctor
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</div>
 
-        <input type="text" placeholder="child's last name">
-
-        <label for="sex" class="text-capitalize">sex</label>
-        <select id="sex">
-            <option>M</option>
-            <option>F</option>
-        </select>
-
-        <span class="pull-right">
-            <span class="glyphicon glyphicon-calendar text-capitalize"></span>
-            <input type="date" style="height: 30px" th:field="*{age}">
-        </span>
-
-        <span class="text-capitalize glyphicon glyphicon-question-sign">
-             Was the Child Born in an Health Facility&lbbrk;Hospital&rbbrk; &quest;
-         </span>
-        <select id="select_hospital" class="pull-right">
-            <option></option>
-            <option value="hospital">Yes</option>
-            <option value="null_hospital">No</option>
-        </select>
-    </div>
-
-    <div id="hospital" class="row center-block select_hospital" style="display: none">
-        <span class="glyphicon glyphicon-map-marker"></span>
-        <input type="text" placeholder="city of birth">
-
-        <span class="glyphicon glyphicon-home"></span>
-        <input type="text" placeholder="healthy facility">
-
-        <span class="glyphicon glyphicon-bell"></span>
-        <input type="text" placeholder="notification number">
-
-        <div class="row center-block">
-            <span class="glyphicon glyphicon-file"></span>
-            <label class="text-capitalize">scanned copy of birth notification</label>
-            <input type="file" class="pull-right" style="display: inline-block; width: 450px">
-        </div>
-
-    </div>
-
-    <div id="null_hospital" class="row center-block select_hospital" style="display: none">
-        <span class="glyphicon glyphicon-map-marker"></span>
-        <input type="text" placeholder="location">
-
-        <input type="text" placeholder="sub location">
-
-        <input type="text" placeholder="place of birth">
-
-        <div class="row center-block">
-            <span class="glyphicon glyphicon-file"></span>
-            <label class="text-capitalize">scanned copy of chief's acknowledgement</label>
-            <input type="file" class="pull-right" style="display: inline-block; width: 450px">
-        </div>
-    </div>
-
-    <div class="row center-block nbcrowdiv">
-        <span class="glyphicon glyphicon-user"></span>
-        <input type="text" placeholder="father's first &amp; middle name" style="width: 300px"> &sol;
-
-        <input type="text" placeholder="father's last name">
-
-        <input type="text" placeholder="id number&sol;passport number" style="width: 180px" class="pull-right">
-    </div>
-    <div class="row center-block">
-        <span class="glyphicon glyphicon-file"></span>
-        <label for="idpp" class="text-capitalize">scanned copy of id/passport</label>
-        <input type="file"  id="idpp" class="pull-right" style="display: inline-block; width: 450px" name="file">
-    </div>
-
-    <!--    <embed id="file" style="width: 100%; display: none">-->
-
-    <div class="row center-block">
-        <span class="glyphicon glyphicon-user"></span>
-        <input type="text" placeholder="mother's first &amp; middle name" style="width: 300px"> &sol;
-
-        <input type="text" placeholder="mother's last name">
-
-        <input type="text" placeholder="id number&sol;passport number" style="width: 180px" class="pull-right">
-    </div>
-    <div class="row center-block">
-        <span class="glyphicon glyphicon-file"></span>
-        <label for="idppm" class="text-capitalize">scanned copy of id/passport</label>
-        <input type="file"  id="idppm" class="pull-right" style="display: inline-block; width: 450px;">
-    </div>
-
-
-    <div class="row center-block nbcrowdiv">
-        <span class="glyphicon glyphicon-certificate"></span>
-        <input class="pull-right" type="submit" value="Register">
-    </div>
-</form>
-
-<!-- Techcares Inc - A Solution To Your Worries Footer -->
 <footer th:insert="fragments/footer :: footer"></footer>
+<script src="js/jquery-3.3.1.min.js"></script>
 
-<script type="text/javascript"
-        th:src="@{/webjars/jquery/1.11.1/jquery.min.js/}"></script>
-<script type="text/javascript"
-        th:src="@{/webjars/bootstrap/3.2.0/js/bootstrap.min.js}"></script>
+<!-- JQUERY STEP -->
+<script src="js/jquery.steps.js"></script>
 
-<script src="js/nbc.js"></script>
+<!-- DATE-PICKER -->
+<script src="vendor/date-picker/js/datepicker.js"></script>
+<script src="vendor/date-picker/js/datepicker.en.js"></script>
 
-</th:block>
+<script src="js/main.js"></script>
 
+<!-- Template created and distributed by Colorlib -->
 </body>
 </html>
